@@ -1621,13 +1621,16 @@
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
+       AOS.init({
             duration: 800,
             once: true,
             offset: 100,
-           
-        });
+            disable: false,
+            startEvent: 'DOMContentLoaded', // Ensure it starts on DOM ready
+            // Mobile-specific settings:
+            mobile: true, // Enable animations on mobile
+            disableMutationObserver: false, // Keep this false
+});
 
         // Header scroll effect
         const header = document.getElementById('header');
