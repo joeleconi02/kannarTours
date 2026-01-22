@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kannar Tours — Expert Visa Assistance & Global Travel Agency</title>
+    <meta name="description" content="Apply for visas to China, Dubai, Singapore, Uganda & more. Book flights, hotels, tours & airport pickup with Kannar Tours — your gateway to the whole world." />
+    <meta name="keywords" content="visa application, travel agency, tour packages, flight booking, hotel reservation, Uganda travel, Dubai visa, China visa, expert visa assistant" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        :root {
+            --primary: #EAAD51;
+            --primary-light: #F5C97A;
+            --primary-dark: #D49438;
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --light-text: #FFFFFF;
+            --light-text-90: rgba(255, 255, 255, 0.9);
+            --light-text-70: rgba(255, 255, 255, 0.7);
+            --gray-text: #E0E0E0;
+            --card-bg: #1e1e1e;
+            --card-bg-light: #2a2a2a;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+            --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --box-shadow-hover: 0 16px 48px rgba(234, 173, 81, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 100%;
+           
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        button {
+            font-family: inherit;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            background: var(--primary);
+            color: var(--darker-bg);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            min-height: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+            background: var(--primary-light);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--darker-bg);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1.5rem;
+            min-height: 44px;
+            font-size: 0.875rem;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--light-text);
+}
+
+.logo-text span {
+  color: var(--primary);
+}
+
+/* Desktop Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--light-text-90);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.mobile-menu-toggle {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: var(--light-text);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* Hamburger animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== MOBILE MENU (768px and below) ===== */
+@media (max-width: 768px) {
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+
+  .nav {
+    position: fixed;
+    top: 80px; 
+    right: -100%; 
+    width: 300px;
+    height: calc(70vh - 80px);
+    background: var(--darker-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2rem 1.5rem;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    z-index: 999;
+    overflow-y: auto;
+    display: block !important; /* Override desktop flex */
+  }
+
+  .nav.active {
+    right: 0; 
+  }
+
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start; 
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+    color: var(--light-text-90);
+    text-align: left;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    width: 100%; 
+  }
+
+  .nav-link::after {
+    width: 0;
+    left: 0;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 30px; 
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  
+  .nav .btn-sm {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7)),
+                        url('Images/783shots_so.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+
+        .hero-title span {
+            color: #fff;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color:#fff;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--light-text-90);
+            font-weight: 500;
+        }
+
+        .hero-feature i {
+            color: var(--primary);
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-hashtags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        
+
+        /* ===== SECTION TITLES ===== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--light-text) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--light-text-70);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .title-icon {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--light-text-70);
+            font-size: 1rem;
+        }
+
+        /* ===== DESTINATIONS SECTION ===== */
+        .destinations-section {
+            background: var(--darker-bg);
+        }
+
+        .destinations-filter {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            background: var(--card-bg);
+            color: var(--light-text-90);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--darker-bg);
+            border-color: var(--primary);
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .destination-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow);
+            border-color: var(--primary);
+        }
+
+        .destination-header {
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .destination-flag {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .destination-card:hover .destination-flag {
+            transform: scale(1.1);
+        }
+
+        .destination-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .destination-name {
+            position: absolute;
+            bottom: 1rem;
+            left: 1.5rem;
+            color: var(--light-text);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .destination-content {
+            padding: 1.5rem;
+        }
+
+        .destination-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            background: rgba(234, 173, 81, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .destination-description {
+            color: var(--light-text-70);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .destination-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        /* ===== FAITH SECTION ===== */
+        .faith-section {
+            background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.95)),
+                        url('Images/travel.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .faith-section {
+                background-attachment: scroll;
+            }
+        }
+
+        .faith-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faith-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+
+        .faith-text {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .faith-verse {
+            background: rgba(234, 173, 81, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 2rem;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            text-align: left;
+            margin-top: 3rem;
+        }
+
+        .verse-text {
+            font-style: italic;
+            color: #ffffff;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .verse-reference {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .contact-details h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details p,
+        .contact-details a {
+            color: var(--light-text-70);
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+        }
+
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .trust-badge {
+            background: rgba(234, 173, 81, 0.05);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid rgba(234, 173, 81, 0.1);
+        }
+
+        .trust-badge i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .trust-badge p {
+            font-size: 0.875rem;
+            color: var(--light-text-90);
+            font-weight: 500;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--light-text-90);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: var(--darker-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--light-text);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(234, 173, 81, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: var(--light-text-70);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23EAAD51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+            padding-right: 3rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--darker-bg);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-description {
+            color: var(--light-text-70);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-link {
+            color: var(--light-text-70);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-link i {
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover i {
+            opacity: 1;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: var(--light-text-70);
+            font-size: 0.875rem;
+        }
+
+        /* ===== WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+            
+            .destinations-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                height: 70px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--darker-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                transition: var(--transition);
+                overflow-y: auto;
+            }
+
+            .nav.active {
+                left: 0;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 1.5rem;
+                width: 100%;
+            }
+
+            .nav-link {
+                font-size: 1.25rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding-top: 70px;
+                min-height: 90vh;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .faith-verse {
+                padding: 1.5rem;
+            }
+
+            .whatsapp-float {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 56px;
+                height: 56px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .section {
+                padding: 2.5rem 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .destination-header {
+                height: 150px;
+            }
+
+            .contact-container {
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* ===== ACCESSIBILITY ===== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .whatsapp-float {
+                animation: none;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ===== DARK/LIGHT MODE SUPPORT ===== */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --dark-bg: #f8f9fa;
+                --darker-bg: #e9ecef;
+                --light-text: #212529;
+                --light-text-90: rgba(33, 37, 41, 0.9);
+                --light-text-70: rgba(33, 37, 41, 0.7);
+                --gray-text: #495057;
+                --card-bg: #ffffff;
+                --card-bg-light: #f8f9fa;
+            }
+
+            .header {
+                background: rgba(248, 249, 250, 0.95);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .footer {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .service-card,
+            .destination-card,
+            .contact-form,
+            .trust-badge {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            }
+
+            .filter-btn {
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-globe-africa logo-icon"></i>
+                <div class="logo-text">Kannar<span>Tours</span></div>
+            </a>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#contact" class="btn btn-sm">Apply for Visa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span> Your Gateway</span><br>to the Whole World
+                </h1>
+                <p class="hero-subtitle">
+                    Travel made possible by God with Kannar Tours and Travel Agency Limited
+                </p>
+                <p class="hero-tagline">
+                    Let us handle logistics while you focus on making memories today.
+                </p>
+                
+               
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-passport"></i>
+                        Apply for Visa Today
+                    </a>
+                    <a href="#destinations" class="btn btn-outline" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-suitcase-rolling"></i>
+                        Explore Tour Packages
+                    </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase title-icon"></i>
+                    We Handle It All — So You Can Just Travel
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive travel services from visa processing to complete tour packages
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-passport service-icon"></i>
+                    <h3 class="service-title">Visa Applications</h3>
+                    <p class="service-description">
+                        Fast, accurate processing for China, Singapore, Dubai, Thailand, Uganda, 
+                        Egypt, Oman, Ethiopia & beyond. Expert guidance through the entire visa process.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-suitcase-rolling service-icon"></i>
+                    <h3 class="service-title">Tour Packages</h3>
+                    <p class="service-description">
+                        Curated itineraries from budget to luxury — tailored to your dreams. 
+                        Experience the best each destination has to offer with our expert planning.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-plane service-icon"></i>
+                    <h3 class="service-title">Flight Bookings</h3>
+                    <p class="service-description">
+                        Best fares worldwide — direct flights, layovers, group bookings. 
+                        We secure the best deals with major airlines and local carriers.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-hotel service-icon"></i>
+                    <h3 class="service-title">Hotel Bookings</h3>
+                    <p class="service-description">
+                        Trusted partners across 100+ countries — 5-star to boutique stays. 
+                        Handpicked accommodations for comfort, location, and value.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fas fa-car service-icon"></i>
+                    <h3 class="service-title">Airport Pickup</h3>
+                    <p class="service-description">
+                        Stress-free arrival — our driver will greet you with a smile. 
+                        Comfortable transfers to your accommodation with local insights.
+                    </p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fas fa-globe-americas service-icon"></i>
+                    <h3 class="service-title">Custom Travel Planning</h3>
+                    <p class="service-description">
+                        Tell us your dream — we'll make it real. Personalized itineraries 
+                        designed around your interests, budget, and travel style.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="section destinations-section" id="destinations">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-globe-africa title-icon"></i>
+                    Where Will You Go Next?
+                </h2>
+                <p class="section-subtitle">
+                    Expert visa assistance for our most popular destinations
+                </p>
+            </div>
+            
+            
+            
+            <div class="destinations-grid">
+                <!-- China -->
+                <div class="destination-card" data-category="asia" data-aos="fade-up" data-aos-delay="100">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/cn.png" alt="China Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">China 🇨🇳</h3>
+                    </div>
+                    <div class="destination-content">
+                       
+                        <p class="destination-description">
+                            Explore the Great Wall, Shanghai's futuristic skyline, and ancient Terracotta Warriors. 
+                            Experience rich history and modern wonders in one destination.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Singapore -->
+                <div class="destination-card" data-category="asia" data-aos="fade-up" data-aos-delay="150">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/sg.png" alt="Singapore Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Singapore 🇸🇬</h3>
+                    </div>
+                    <div class="destination-content">
+                       
+                        <p class="destination-description">
+                            Discover Gardens by the Bay, Marina Bay Sands, and Sentosa Island. 
+                            A perfect blend of modern attractions and green spaces.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dubai -->
+                <div class="destination-card" data-category="middle-east" data-aos="fade-up" data-aos-delay="200">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/ae.png" alt="UAE Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Dubai 🇦🇪</h3>
+                    </div>
+                    <div class="destination-content">
+                        
+                        <p class="destination-description">
+                            Experience Burj Khalifa, Palm Jumeirah, and thrilling desert safaris. 
+                            Luxury shopping and world-class entertainment await.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Thailand -->
+                <div class="destination-card" data-category="asia" data-aos="fade-up" data-aos-delay="250">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/th.png" alt="Thailand Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Thailand 🇹🇭</h3>
+                    </div>
+                    <div class="destination-content">
+                        
+                        <p class="destination-description">
+                            From Bangkok's temples to Phuket's beaches and Chiang Mai's culture. 
+                            A perfect mix of spirituality, nature, and relaxation.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Uganda -->
+                <div class="destination-card" data-category="africa" data-aos="fade-up" data-aos-delay="300">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/ug.png" alt="Uganda Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Uganda 🇺🇬</h3>
+                    </div>
+                    <div class="destination-content">
+                       
+                        <p class="destination-description">
+                            Experience gorilla trekking, Murchison Falls, and Lake Victoria. 
+                            Discover the "Pearl of Africa" with our expert guides.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Explore Packages</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Egypt -->
+                <div class="destination-card" data-category="africa" data-aos="fade-up" data-aos-delay="350">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/eg.png" alt="Egypt Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Egypt 🇪🇬</h3>
+                    </div>
+                    <div class="destination-content">
+                        
+                        <p class="destination-description">
+                            Explore ancient pyramids, Luxor temples, and Nile River cruises. 
+                            Step back in time to one of the world's oldest civilizations.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Oman -->
+                <div class="destination-card" data-category="middle-east" data-aos="fade-up" data-aos-delay="400">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/om.png" alt="Oman Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Oman 🇴🇲</h3>
+                    </div>
+                    <div class="destination-content">
+                        
+                        <p class="destination-description">
+                            Discover Muscat's souks, Wahiba Sands desert, and Nizwa Fort. 
+                            Authentic Arabian culture meets stunning natural landscapes.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ethiopia -->
+                <div class="destination-card" data-category="africa" data-aos="fade-up" data-aos-delay="450">
+                    <div class="destination-header">
+                        <img src="https://flagcdn.com/w640/et.png" alt="Ethiopia Flag" class="destination-flag">
+                        <div class="destination-overlay"></div>
+                        <h3 class="destination-name">Ethiopia 🇪🇹</h3>
+                    </div>
+                    <div class="destination-content">
+                       
+                        <p class="destination-description">
+                            Visit Lalibela's rock-hewn churches, Simien Mountains, and Addis Ababa. 
+                            Africa's oldest independent nation awaits your discovery.
+                        </p>
+                        <div class="destination-actions">
+                            <a href="#contact" class="btn btn-sm btn-full">Apply for Visa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-2" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn">
+                    <i class="fas fa-globe"></i>
+                    And Beyond... Explore All Destinations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faith Section -->
+    <section class="section faith-section" id="about">
+        <div class="container">
+            <div class="faith-content" data-aos="fade-up">
+                <div class="faith-icon" data-aos="zoom-in">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <h2 class="section-title" style="color: white;">Travel Made Possible by God</h2>
+                <p class="faith-text">
+                    At Kannar Tours, we believe every journey is divinely guided. Our team doesn't just book trips — 
+                    we pray over your safety, peace, and joy as you explore the world. We see travel as a sacred 
+                    opportunity to connect with God's creation and grow in faith. Let faith lead your footsteps... 
+                    and let us handle the details.
+                </p>
+                <div class="faith-verse" data-aos="fade-up" data-aos-delay="200">
+                    <p class="verse-text">
+                        "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, 
+                        plans to give you hope and a future."
+                    </p>
+                    <p class="verse-reference">— Jeremiah 29:11</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope title-icon"></i>
+                    Ready to Travel? Let's Make It Happen
+                </h2>
+                <p class="section-subtitle">
+                    Contact us today for expert visa assistance and travel planning
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+256782421578">+256-782421578</a></p>
+                            <p><a href="tel:+256705388063">+256-705388063</a></p>
+                            <p><small><em>(Click to call on mobile)</em></small></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:Kannartours@gmail.com">Kannartours@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Serving clients globally from Kampala, Uganda</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trust-badges">
+                        <div class="trust-badge" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-users"></i>
+                            <p>1000+ Happy Travelers Since 2020</p>
+                        </div>
+                        <div class="trust-badge" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-star"></i>
+                            <p>Rated 4.9/5 on Google Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Interested In *</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="visa">Visa Application</option>
+                                <option value="tour">Tour Package</option>
+                                <option value="flight">Flight Booking</option>
+                                <option value="hotel">Hotel Booking</option>
+                                <option value="custom">Custom Travel Planning</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="destination" class="form-label">Destination (if applicable)</label>
+                            <select id="destination" class="form-control">
+                                <option value="">Select destination</option>
+                                <option value="china">China</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="dubai">Dubai</option>
+                                <option value="thailand">Thailand</option>
+                                <option value="uganda">Uganda</option>
+                                <option value="egypt">Egypt</option>
+                                <option value="oman">Oman</option>
+                                <option value="ethiopia">Ethiopia</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tell us about your travel plans..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Kannar Tours</h3>
+                    <p class="footer-description">
+                        Travel made possible by God with Kannar Tours and Travel Agency Limited. 
+                        Your gateway to the whole world.
+                    </p>
+                    
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home" class="footer-link">Home <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#services" class="footer-link">Services <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#destinations" class="footer-link">Destinations <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#about" class="footer-link">About Us <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#contact" class="footer-link">Contact <i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services" class="footer-link">Visa Applications <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#services" class="footer-link">Tour Packages <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#services" class="footer-link">Flight Bookings <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#services" class="footer-link">Hotel Reservations <i class="fas fa-chevron-right"></i></a></li>
+                        <li><a href="#services" class="footer-link">Airport Pickup <i class="fas fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p class="footer-description">
+                        Get travel deals & visa tips delivered weekly to your inbox.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-sm btn-full">
+                            <i class="fas fa-envelope"></i>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© <span id="currentYear">2026</span> Kannar Tours & Travel Agency Limited. All rights reserved. | Wednesday, January 21, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/256782421578?text=Hi,%20I'd%20like%20to%20apply%20for%20a%20visa%20or%20book%20a%20tour%20with%20Kannar%20Tours." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            disable: window.innerWidth < 768 ? 'mobile' : false
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 
+                mobileMenuToggle.classList.contains('active')
+            );
+            
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+                
+                // Update active link
+                document.querySelectorAll('.nav-link').forEach(item => {
+                    item.classList.remove('active');
+                });
+                link.classList.add('active');
+            });
+        });
+
+        // Destination filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const destinationCards = document.querySelectorAll('.destination-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active filter button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter destination cards
+                destinationCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            
+            // Basic validation
+            if (!name || !email || !phone || !service) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Create WhatsApp message
+            const destination = document.getElementById('destination').value;
+            const message = document.getElementById('message').value;
+            
+            let whatsappMessage = `Hello Kannar Tours!\n\n`;
+            whatsappMessage += `I'm ${name} and I'm interested in ${service}.\n`;
+            if (destination) {
+                whatsappMessage += `Destination: ${destination}\n`;
+            }
+            if (message) {
+                whatsappMessage += `Details: ${message}\n`;
+            }
+            whatsappMessage += `\nContact me at:\n📧 ${email}\n📞 ${phone}`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Open WhatsApp
+            window.open(`https://wa.me/256782421578?text=${encodedMessage}`, '_blank');
+            
+            // Reset form
+            this.reset();
+            
+            // Show success feedback
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            submitButton.style.backgroundColor = '#25D366';
+            
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.style.backgroundColor = '';
+            }, 3000);
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links with header offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = targetPosition - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    if (targetId !== '#contact') {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        document.querySelector(`.nav-link[href="${targetId}"]`)?.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add touch detection for hover effects
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+            }
+        });
+    </script>
+</body>
+</html>
